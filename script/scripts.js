@@ -37,3 +37,21 @@ const chooseSlide = () => {
         }
     }
 }
+
+showSlide(index);
+
+nextBtn.addEventListener("click", () => {
+    showSlide(index + 1);
+});
+
+prevBtn.addEventListener("click", () => {
+    showSlide(index - 1);
+});
+
+chooseBtn.addEventListener("click", () => {
+    chooseSlide();
+});
+
+showLoginBtn.addEventListener("click", () => {
+    loginBtn.classList.toggle("hidden");
+})

@@ -24,6 +24,8 @@
     --color-space-purple: #0b0813;
     --color-white: #E2E8F0;
     --color-gray:#94A3B8;
+    --color-green: #55af61;
+    --color-red: #af5855;
 }
 
 body {
@@ -429,6 +431,95 @@ h1, h2 {
 
             p{
                 font-size: 2vmin;
+            }
+        }
+    }
+}
+
+#quiz {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    h2 {
+        font-size: 3.5vmin;
+    }
+
+    .project-quiz {
+        width: 40%;
+        background-color: var(--color-black);
+        box-shadow: 5px 5px 8px var(--color-purple);
+        padding: var(--spacing-xl); 
+        border-radius: 8px;
+
+        .question-quiz {
+            display: flex;
+            flex-direction: column;
+            padding: var(--spacing-lg);
+
+            #title-question {
+                margin-bottom: var(--spacing-lg);
+                text-align: center;
+
+                h2 {
+                    font-size: 2.5vmin;
+                }
+            }    
+            
+            #answer-question-btn {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .option-question-btn {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: var(--spacing-sm);
+                    gap: var(--spacing-md);
+                    margin-block: var(--spacing-sm);
+                    background-color: var(--color-purple);
+                    color: var(--color-white);
+                    border-radius: 10px;
+                    font-size: 2vmin;
+                    cursor: pointer;
+                    transition: all .5s;
+
+                    &:hover {
+                        background-color: var(--color-gray);
+                        color: var(--color-black);
+                        scale: 1.02;
+                    }
+
+                    .correct {
+                        background-color: var(--color-green);
+                    }
+
+                    .incorrect {
+                        background-color: var(--color-red);
+                    }
+                }
+            }
+
+            #next-question-btn {
+                margin-top: var(--spacing-lg);
+                padding: var(--spacing-sm);
+                border-radius: 10px;
+                background-color: var(--color-purple);
+                color: var(--color-white);
+                font-size: 2vmin;
+                cursor: pointer;
+                transition: all .5s;
+                display: none;
+
+                &:hover {
+                    background-color: var(--color-gray);
+                    color: var(--color-black);
+                    scale: 1.02;
+                }
             }
         }
     }

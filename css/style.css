@@ -121,6 +121,7 @@ h1, h2 {
     gap: var(--spacing-lg);
     padding: var(--spacing-lg);
     margin: var(--spacing-lg);
+    overflow: hidden;
 
     .explain-problem {
         width: 55%;
@@ -138,12 +139,14 @@ h1, h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
 
         .image-news {
             text-align: center;
             display: flex;
             flex-direction: column;
             padding: var(--spacing-md);
+            overflow: hidden;
 
             h2 {
                 font-size: 3.5vmin;
@@ -151,6 +154,9 @@ h1, h2 {
             }
 
             img {
+                width: 100%;        
+                max-width: 100%;   
+                height: auto;       
                 border: 2px solid var(--color-purple);
                 border-radius: 8px;
                 transition: .5s;

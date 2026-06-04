@@ -436,7 +436,7 @@ h1, h2 {
 
 footer {
     height: 200px;
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
     background-color: var(--color-black);
     text-align: center;
 

@@ -9,7 +9,7 @@ const chooseBtn = document.getElementById("choose-btn");
 
 const showSlide = (nextIndex) => {
     slides[index].classList.remove("active");
-    index = newIndex;
+    index = nextIndex;
 
     if (index < 0) {
         index = slides.length - 1;
@@ -51,7 +51,3 @@ prevBtn.addEventListener("click", () => {
 chooseBtn.addEventListener("click", () => {
     chooseSlide();
 });
-
-showLoginBtn.addEventListener("click", () => {
-    loginBtn.classList.toggle("hidden");
-})

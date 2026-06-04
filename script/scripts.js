@@ -6,6 +6,7 @@ let index = 0;
 const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
 const chooseBtn = document.getElementById("choose-btn");
+const newsLink = document.querySelectorAll("#news-link");
 
 const showSlide = (nextIndex) => {
     slides[index].classList.remove("active");
@@ -38,6 +39,12 @@ const chooseSlide = () => {
     }
 }
 
+const newsClick = (event) => {
+    event.preventDefault();
+    alert("Você será direcionado para o site da notícia")
+    window.open(event.currentTarget.href, "_blank");
+}
+
 showSlide(index);
 
 nextBtn.addEventListener("click", () => {
@@ -50,4 +57,8 @@ prevBtn.addEventListener("click", () => {
 
 chooseBtn.addEventListener("click", () => {
     chooseSlide();
+});
+
+newsLink.forEach((link) => {
+    link.addEventListener("click", newsClick);
 });

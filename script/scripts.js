@@ -21,3 +21,19 @@ const showSlide = (nextIndex) => {
 
     slides[index].classList.add("active");
 }
+
+const chooseSlide = () => {
+    const chosenFeature = prompt(
+        `Escolha uma etapa de 1 até ${slides.length}`
+    );
+
+    if (chosenFeature !== null) {
+        const slideIndex = parseInt(chosenFeature);
+
+        if (!isNaN(slideIndex) && slideIndex >= 1 && slideIndex <= slides.length) {
+            showSlide(slideIndex - 1);
+        } else {
+            alert("Valor inválido");
+        }
+    }
+}

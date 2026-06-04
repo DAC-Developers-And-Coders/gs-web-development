@@ -266,7 +266,31 @@ h1, h2 {
             display: block;
             margin-bottom: 1.5dvh;
         }
+    }
 
+    .button-click {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        #prev-btn,#choose-btn,#next-btn {
+            background: var(--color-black);
+            color: var(--color-white);
+            border-radius: 50%;
+            transition: 0.3s;
+            width: var(--spacing-xl);
+            height: var(--spacing-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-md);
+
+            &:hover {
+                background-color: var(--color-gray);
+                color: var(--color-black);
+            }
+        }
     }
 }
 

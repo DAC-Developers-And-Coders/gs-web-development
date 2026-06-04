@@ -7,6 +7,7 @@ const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
 const chooseBtn = document.getElementById("choose-btn");
 const newsLink = document.querySelectorAll("#news-link");
+import questions from "./questions"
 
 const showSlide = (nextIndex) => {
     slides[index].classList.remove("active");

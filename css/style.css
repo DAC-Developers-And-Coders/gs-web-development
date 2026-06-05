@@ -46,11 +46,13 @@
 
 body {
     background-color: var(--color-background);
+    overflow-x: hidden;
 }
 
 html {
     scroll-behavior: smooth;
     font-family: 'Inter-Italic';
+    overflow-x: hidden;
 }
 
 ul {

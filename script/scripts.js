@@ -7,12 +7,32 @@ const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
 const chooseBtn = document.getElementById("choose-btn");
 const newsLink = document.querySelectorAll("#news-link");
+const themeSelect = document.getElementById('theme-select');
 import questions from "./questions.js"
 const questionTitle = document.getElementById("title-question");
 const questionAnswer = document.getElementById("answer-question-btn");
 const questionNext = document.getElementById("next-question-btn");
 let currentQuestionIndex = 0;
 let score = 0;
+
+function applyTheme(theme) {
+    const root = document.documentElement;
+    
+    root.classList.remove('theme-light', 'theme-alt');
+    
+    if (theme === 'light') root.classList.add('theme-light');
+    if (theme === 'alt')   root.classList.add('theme-alt');
+    
+    localStorage.setItem('theme', theme);
+}
+
+themeSelect.addEventListener('change', (event) => {
+    applyTheme(event.target.value);
+});
+
+const savedTheme = localStorage.getItem('theme') || 'default';
+themeSelect.value = savedTheme;
+applyTheme(savedTheme);
 
 const showSlide = (nextIndex) => {
     slides[index].classList.remove("active");

@@ -488,18 +488,18 @@ h1, h2 {
                     cursor: pointer;
                     transition: all .5s;
 
+                    &.correct {
+                        background-color: var(--color-green) !important;
+                    }
+
+                    &.incorrect {
+                        background-color: var(--color-red) !important;
+                    }
+
                     &:hover {
                         background-color: var(--color-gray);
                         color: var(--color-black);
                         scale: 1.02;
-                    }
-
-                    .correct {
-                        background-color: var(--color-green);
-                    }
-
-                    .incorrect {
-                        background-color: var(--color-red);
                     }
                 }
             }

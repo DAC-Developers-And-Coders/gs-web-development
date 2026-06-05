@@ -77,7 +77,7 @@ function startQuiz() {
 }
 
 function resetState() {
-    nextBtn.style.display = "none";
+   questionNext.style.display = "none";
     while (questionAnswer.firstChild) {
         questionAnswer.removeChild(questionAnswer.firstChild)
     }
@@ -99,4 +99,46 @@ function showQuestion() {
     })
 }
 
+function selectAnswer(event) {
+    const answers = questions[currentQuestionIndex].answers;
+    const correctAnswer = answers.filter((answer) => answer.correct == true)[0];
+    const selectedBtn = event.target;
+    const isCorrect = selectedBtn.dataset.id == correctAnswer.id;
+    if (isCorrect) {
+        selectedBtn.classList.add("correct");
+        score++;
+    } else {
+        selectedBtn.classList.add("incorrect");
+    }
+    Array.from(questionAnswer.children).forEach((button) => {
+        button.disabled = true;
+        if (button.dataset.id == correctAnswer.id) {
+        button.classList.add("correct");
+        }
+    });
+    questionNext.style.display = "block";
+}
+
+function showScore() {
+    resetState();
+
+}
+
+function handleNextButton() {
+    currentQuestionIndex++;
+     if (currentQuestionIndex < questions.length) {
+        showQuestion();
+     } else {
+        showScore();
+        questionTitle.innerHTML = `Você acertou ${score} de ${questions.length}!`;
+     }
+}
+
+questionNext.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    } else {
+        startQuiz;
+    }
+});
 startQuiz();

@@ -449,7 +449,7 @@ h1, h2 {
     }
 
     .project-quiz {
-        width: 40%;
+        width: 45%;
         background-color: var(--color-black);
         box-shadow: 5px 5px 8px var(--color-purple);
         padding: var(--spacing-xl); 
@@ -480,7 +480,7 @@ h1, h2 {
                     flex-direction: column;
                     padding: var(--spacing-sm);
                     gap: var(--spacing-md);
-                    margin-block: var(--spacing-sm);
+                    margin-block: var(--spacing-md);
                     background-color: var(--color-purple);
                     color: var(--color-white);
                     border-radius: 10px;

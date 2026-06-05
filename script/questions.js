@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "1. Qual problema principal o projeto Nebula Noise busca resolver?",
+        question: "Qual problema principal o projeto Nebula Noise busca resolver?",
         answers: 
         [
             {id: 1, text: "Falhas em computadores pessoais", correct:false},
@@ -10,7 +10,7 @@ const questions = [
         ]
     },
     {
-        question: "2. O que pode ser afetado pelo aumento do lixo espacial?",
+        question: "O que pode ser afetado pelo aumento do lixo espacial?",
         answers: 
         [
             {id: 1, text: "Apenas redes sociais", correct:false},
@@ -20,7 +20,7 @@ const questions = [
         ]
     },
     {
-        question: "3. Qual é a principal função do Nebula Noise?",
+        question: "Qual é a principal função do Nebula Noise?",
         answers: 
         [
             {id: 1, text: "Construir satélites", correct:false},
@@ -30,7 +30,7 @@ const questions = [
         ]
     },
     {
-        question: "4. Qual tecnologia foi utilizada para desenvolver os cálculos e simulações do projeto?",
+        question: "Qual tecnologia foi utilizada para desenvolver os cálculos e simulações do projeto?",
         answers: 
         [
             {id: 1, text: "Arduino", correct:false},
@@ -40,7 +40,7 @@ const questions = [
         ]
     },
     {
-        question: "5. Qual é a função do Arduino no projeto?",
+        question: "Qual é a função do Arduino no projeto?",
         answers: 
         [
             {id: 1, text: "Armazenar dados em nuvem", correct:false},
@@ -50,7 +50,7 @@ const questions = [
         ]
     },
     {
-        question: "6. Qual funcionalidade permite avaliar como diferentes níveis de interferência afetam a estabilidade das comunicações orbitais?",
+        question: "Qual funcionalidade permite avaliar como diferentes níveis de interferência afetam a estabilidade das comunicações orbitais?",
         answers: 
         [
             {id: 1, text: "Sistema de relatórios financeiros", correct:false},
@@ -60,7 +60,7 @@ const questions = [
         ]
     },
     {
-        question: "7. Qual dos serviços abaixo depende de comunicações via satélite?",
+        question: "Qual dos serviços abaixo depende de comunicações via satélite?",
         answers: 
         [
             {id: 1, text: "GPS", correct:true},
@@ -70,7 +70,7 @@ const questions = [
         ]
     },
     {
-        question: "8. Qual benefício o projeto oferece aos operadores de satélites?",
+        question: "Qual benefício o projeto oferece aos operadores de satélites?",
         answers: 
         [
             {id: 1, text: "Compra de novos equipamentos", correct:false},
@@ -80,7 +80,7 @@ const questions = [
         ]
     },
     {
-        question: "9. Como o Nebula Noise contribui para a segurança das comunicações?",
+        question: "Como o Nebula Noise contribui para a segurança das comunicações?",
         answers: 
         [
             {id: 1, text: "Bloqueando sinais de satélite", correct:false},
@@ -90,7 +90,7 @@ const questions = [
         ]
     },
     {
-        question: "10. Como o Nebula Noise auxilia na prevenção de falhas em sistemas de comunicação orbital?",
+        question: "Como o Nebula Noise auxilia na prevenção de falhas em sistemas de comunicação orbital?",
         answers: 
         [
             {id: 1, text: "Substituindo satélites antigos por novos modelos", correct:false},

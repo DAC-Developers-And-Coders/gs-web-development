@@ -7,7 +7,12 @@ const nextBtn = document.getElementById("next-btn");
 const prevBtn = document.getElementById("prev-btn");
 const chooseBtn = document.getElementById("choose-btn");
 const newsLink = document.querySelectorAll("#news-link");
-import questions from "./questions"
+import questions from "./questions.js"
+const questionTitle = document.getElementById("title-question");
+const questionAnswer = document.getElementById("answer-question-btn");
+const questionNext = document.getElementById("next-question-btn");
+let currentQuestionIndex = 0;
+let score = 0;
 
 const showSlide = (nextIndex) => {
     slides[index].classList.remove("active");
@@ -63,3 +68,35 @@ chooseBtn.addEventListener("click", () => {
 newsLink.forEach((link) => {
     link.addEventListener("click", newsClick);
 });
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    questionNext.innerHTML = "Próximo";
+    showQuestion();
+}
+
+function resetState() {
+    nextBtn.style.display = "none";
+    while (questionAnswer.firstChild) {
+        questionAnswer.removeChild(questionAnswer.firstChild)
+    }
+}
+
+function showQuestion() {
+    resetState();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionTitle.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    currentQuestion.answers.forEach((answers) => {
+        const button = document.createElement("button");
+        button.innerHTML = answers.text;
+        button.dataset.id = answers.id;
+        button.classList.add("option-question-btn")
+        button.addEventListener("click", selectAnswer)
+        questionAnswer.appendChild(button);
+    })
+}
+
+startQuiz();

@@ -7,4 +7,4 @@ GABRIEL NOVAGA PEREIRA - RM 573196
 MATHEUS MONTEIRO DA SILVA - RM 573842
 
 LINK REPOSITÓRIO GITHUB:
-https://github.com/DAC-Developers-And-Coders/gs-web-development/tree/main
+https://github.com/DAC-Developers-And-Coders/gs-web-development

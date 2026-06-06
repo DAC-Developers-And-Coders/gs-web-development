@@ -258,6 +258,7 @@ h1, h2 {
 
                 &:hover {
                     scale: 1.1;
+                    border: 5px solid var(--color-tertiary);
                 }
             }
         }
